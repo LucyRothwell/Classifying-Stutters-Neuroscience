@@ -1,4 +1,5 @@
-# Classifying-stutters-neuroscience
+# Applying Machine Learning to EEG and fNIRS (Neural) Data to Predict Stutters
+
 Code used in a psychology research project aimed at classifiying verbal stutter events by applying machine learning to neural (EEG and fNIRS) data. Participants were males who stutter. Participants were linked up to fNIRS and EEG neural imaging technology and recorded speaking for around 20 minutes at a time. The audio recordings allowed the stutter events to be marked in time. These markings could then be synced and used to label the fNIRS/EEG data for use in classification.
 
 Two scripts:
