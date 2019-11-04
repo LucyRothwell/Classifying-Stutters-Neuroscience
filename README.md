@@ -6,6 +6,6 @@ Two scripts:
 
 1. A script that labels stutter events on the EEG and fNIRS data stored in csv files. In each participant's EEG/fNIRS csv files, there were appropximately 15,000 rows each representing a 0.1 second neural reading. Of these 15,000 rows, around 3-7% represented stutter events. This script takes as in input the markings from the audio file which shows the start and end times of the stutters (they lasted between 0.2 and 3 seconds) and time-syncs this with the fNIRS and EEG data recordings. It then prints a column of 1s and 0s into the column "stutter" on the fNIRS/EEG csv exports which are then inputted to the machine learning classifiers.
 
-![Image of Output](/Users/lucyrothwell/Google_Drive/MSc Psych - UCL/9. Dissertation (Y2)/*Stuttering/Labelling/Labelling output example.png)
+/Users/lucyrothwell/Google_Drive/MSc Psych - UCL/9. Dissertation (Y2)/*Stuttering/Labelling/Labelling output example.png
 
 2. The machine learning script used to classifiy stutter events (using SVM, KNN, Random Forest and Logistic Regression).
