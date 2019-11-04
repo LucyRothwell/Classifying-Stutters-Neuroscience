@@ -15,15 +15,16 @@ Created on Thu Jun 27 15:39:19 2019
 """
 
 # CONTENTS
-# Data visualisation / missing values  / downsampling
+# Data visualisation, missing values & downsampling
 # K Nearest Neighbour (KNN)
 # Support Vector Machine (SVM)
 # Randomforest
 # Logistic Regression
+# Writing the outputs
 
 
-##########Import all the necessary libraries
-##########
+# IMPORT LIBRARIES
+
 import pandas as pd  #Pandas for managing data
 import matplotlib.pyplot as plt #Matplotlib for plotting
 import matplotlib
@@ -37,8 +38,7 @@ from sklearn import datasets
 
 print('The scikit-learn version is {}.'.format(sklearn.__version__))
 
-#All the machine learning algorithms from the sklean libraries. 
-#Notice they are under different 'sublibraries' - why?
+#The machine learning algorithms from the sklean libraries. 
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.neighbors import KNeighborsClassifier
@@ -50,16 +50,16 @@ from sklearn.svm import SVC
 #The regression machine learning algorithms from the sklean libraries. 
 from sklearn.ensemble import RandomForestRegressor
 
-# Import tools needed for visualization
+# Tools needed for visualization
 from sklearn.tree import export_graphviz
 import pydot
 
-#scoring metrics from sklearn
+# Scoring metrics from sklearn
 from sklearn.metrics import accuracy_score, mean_squared_error, r2_score, roc_curve, auc, confusion_matrix, balanced_accuracy_score, multilabel_confusion_matrix, classification_report # decent video guide: https://www.youtube.com/watch?v=TtIjAiSojFE
 from sklearn.model_selection import cross_val_predict
 # > good explanation: https://github.com/justmarkham/scikit-learn-videos/blob/master/09_classification_metrics.ipynb 
 
-# Use numpy to convert to arrays
+# Numpy to convert to arrays
 import numpy as np
 
 # For imputation of missing values 
@@ -67,17 +67,11 @@ from sklearn.impute import SimpleImputer
 from fancyimpute import KNN
 
 
-
-########## Read data
-##########
-
-# ---- DATA ----
-
+# LOAD/READ DATA 
 
 #data_columns = list(dataFrame)
 #imp.fit(dataFrame)
 #SimpleImputer(copy=True, fill_value=None, strategy='mean', verbose=0)
-### Data
 dataFrame = "/Users/lucyrothwell/Google Drive copy/MSc  Psych - UCL/9. Dissertation (Y2)/Stuttering/*Data - EEG/PWS EEG/3. PROCESSED (.csv)/006_PWS_Social (P) - ICA - C(600) - BASELINE.csv"
 dataFrame = pd.read_csv(dataFrame, encoding='utf-8', skiprows=0)
 resultFileName = "Results - DELETE.csv"
@@ -85,11 +79,11 @@ resultFileName = "Results - DELETE.csv"
 # fNIRS or EEG ICA
 colNum = dataFrame.shape[1]
 
-## EEG CHANNEL
+# EEG CHANNEL
 #colNum = 31
 
-# ONCE THE ABOVE INFO HAS BEEN ENTERED, THE PROGRAMME CAN RUN AS A 
-# A WHOLE, AND WILL OUTPUT THE RESULTS INTO A CSV
+# **** ONCE THE ABOVE INFO HAS BEEN ENTERED, THE PROGRAMME CAN RUN
+# AND WILL OUTPUT THE RESULTS INTO A CSV. NO MORE EDITING NEEDED FROM HERE ***
 
 dataFrame_types = dataFrame.dtypes # variable types
 dataFrame.shape
@@ -149,21 +143,18 @@ print(valueCountOnes)
 print(valueCountZeros)
 
 
-
-##########Make sure we have no missing data
+# Make sure there is no missing data
 percent_missing = dataFrame.isnull().sum()*100/len(dataFrame)
 print(percent_missing)
 
 
-########## TRAIN
-#We are going to apply the below four algorithms to this problem and evaluate its effectiveness.
-#And finally choose the best algorithm and train it.
-#Algorithms:
-    #K – Nearest Neighbour (KNN)
+# TRAINING
+# Apply the below four algorithms  and evaluate their effectiveness.
+# Algorithms:
+    #K Nearest Neighbour (KNN)
     #Support Vector Machine (SVM)
     #Randomforest
     #Logistic Regression
-##########
 
 #Separating the data into training & testing set (holdout and cross-val).
     
