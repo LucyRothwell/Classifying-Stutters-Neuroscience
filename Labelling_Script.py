@@ -8,22 +8,22 @@ Created on Wed Jun 26 09:55:57 2019
 import os 
 print(os.getcwd()) 
 import pandas as pd # For  data manipulation
-import numpy as np # For ML algorithms
+import numpy as np # For  data manipulation
 
 
-# ONCE EVENTS HAVE BEEN LABELLED ON THE AUDIO FILES IN AUDICATY, THEY CAN BE 
-# EXPORTED TO TXT FILE. COPY THEM INTO A CSV. THIS PROGRAMME TAKES THAT CSV, 
-# (ALONG WITH THE FNIRS/EEG DATA CSVs) AND OUTPUTS A VERTICAL LIST OF 1s and 0s. 
-# THIS LIST CAN BE COPIED DIRECTLY INTO THE "STUTTER" COLUMN ON FNIRS/EEG DATA
-# CSV TO SHOW WHICH ROWS REPRESENT STUTTERS (1) VERSUS NON-STUTTERS (0).
+# ONCE EVENTS HAVE BEEN LABELLED ON THE AUDIO FILES IN THE AUDICATY SOFTWARE, THE START AND 
+# FINISH TIMES OF THE STUTTERS CAN BE EXPORTED TO TXT FILE. COPY THE CONTENTS OF THE TEXT FILE INTO A CSV. 
+# THIS PYTHON PROGRAMME TAKES THAT CSV, (ALONG WITH THE FNIRS/EEG DATA CSVs) AND OUTPUTS A VERTICAL LIST OF 1s and 0s 
+# IN A FILE CALLED "STUTTERSLIST01". THIS LIST CAN BE COPIED DIRECTLY INTO THE "STUTTER" COLUMN 
+# ON THE FNIRS/EEG DATA CSV TO SHOW WHICH ROWS REPRESENT STUTTERS (1) VERSUS NON-STUTTERS (0).
 
 # LOAD RELEVANT FILES
 
-# Loads the fNIRS or EEG csv file. *NOTE*: This programme assumes column 1 of this sheet is the timings)
+# Loads the fNIRS or EEG csv file. (*NOTE*: This programme assumes column 1 of this sheet is the timings)
 fNIRS_EEG = '/Users/lucyrothwell/Google Drive copy/MSc  Psych - UCL/9. Dissertation (Y2)/Stuttering/*Data - EEG/PWS EEG/3. Processed (.csv)/018_PWS_Social (P) - CH - C(430).csv'
 fNIRS_EEG = pd.read_csv(fNIRS_EEG, encoding='utf-8', skiprows=0)
 
-# Load "labels" data (the label start and finish times, exported from audacity)
+# Load "labels" data csv file (the label start and finish times, exported from audacity)
 labels_raw = "/Users/lucyrothwell/Google Drive copy/MSc  Psych - UCL/9. Dissertation (Y2)/Stuttering/*Data - Audio/PWS/018PWSsocial - LABELS.csv"
 labels = pd.read_csv(labels_raw, encoding='utf-8', skiprows=1)
 
@@ -31,11 +31,11 @@ labels = pd.read_csv(labels_raw, encoding='utf-8', skiprows=1)
 os.chdir('/Users/lucyrothwell/Google Drive copy/MSc  Psych - UCL/9. Dissertation (Y2)/Stuttering/*Data - Audio/PWS/')
 stuttersList01 = open("018PWS_social - LABELS_01.csv","a")
 
-# ^ ONCE THE DATA FILES ABOVE HAVE BEEN CREATED, YOU CAN JUST PRESS RUN.
-# YOU SHOULD  GET THE  LIST 1s and 0s FOR COPY INTO THE "STUTTER COLUMN" IN 
-# THE EEG/FNIRS DATA CSV
 
-# PSEUDO
+# *** ONCE THE DATA FILES ABOVE HAVE BEEN LOADED, YOU CAN PRESS RUN. NO MORE EDITING NEEDED FROM HERE****
+
+
+# PSEUDO CODE
 # Function for extracting each decisecond in the stutter ranges extracted 
 # from Audacity 
 # > Take start time of R0,C0 (row 0, column 0)
