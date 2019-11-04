@@ -5,7 +5,7 @@ Created on Wed Jun 26 09:55:57 2019
 
 @author: lucyrothwell
 """
-import os # Function to see currernt working directory
+import os 
 print(os.getcwd()) 
 import pandas as pd # For  data manipulation
 import numpy as np # For ML algorithms
