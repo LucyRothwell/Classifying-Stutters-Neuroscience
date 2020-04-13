@@ -6,21 +6,14 @@ Created on Thu Aug  8 17:47:38 2019
 @author: lucyrothwell
 """
 
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Jun 27 15:39:19 2019
-
-@author: lucyrothwell
-"""
-
 # CONTENTS
 # Data visualisation, missing values & downsampling
 # K Nearest Neighbour (KNN)
 # Support Vector Machine (SVM)
-# Randomforest
-# Logistic Regression
-# Writing the outputs
+# Randomforest (RF)
+# Logistic Regression (LR)
+# Importances
+# Writing the outputs to a file
 
 
 # IMPORT LIBRARIES
@@ -72,7 +65,7 @@ from fancyimpute import KNN
 #data_columns = list(dataFrame)
 #imp.fit(dataFrame)
 #SimpleImputer(copy=True, fill_value=None, strategy='mean', verbose=0)
-dataFrame = "/Users/lucyrothwell/Google Drive copy/MSc  Psych - UCL/9. Dissertation (Y2)/Stuttering/*Data - EEG/PWS EEG/3. PROCESSED (.csv)/006_PWS_Social (P) - ICA - C(600) - BASELINE.csv"
+dataFrame = # path to specific fNIRS/EEG file
 dataFrame = pd.read_csv(dataFrame, encoding='utf-8', skiprows=0)
 resultFileName = "Results - DELETE.csv"
 
@@ -414,31 +407,12 @@ feature_importances = sorted(feature_importances, key = lambda x: x[1], reverse 
 
 
 # WRITING RESULTS
-results = open("/Users/lucyrothwell/Google Drive copy/MSc  Psych - UCL/9. Dissertation (Y2)/Stuttering/*ML scripts (and results)/" + resultFileName, "a")
+results = open(#"results file path" + resultFileName, "a")
 
-results.write("K-nearest Neighbours accuracy: " + str(resultKNN))
-results.write("\n" + str(KNN_cv))
-results.write("\n" + "Sensitivity KNN: " + str(sensitivityKNN))
-results.write("\n" + "Specificity KNN: " + str(specificityKNN))
-results.write("\n" + "AUC KNN: " + str(AUC_KNN)+ "\n" + str(confMatrixKNN)+ "\n" + str(classReportKNN))
-
-results.write("\n" + "\n" + "SVM accuracy:" + str(resultSVM))
-results.write("\n" + str(SVM_cv))
-results.write("\n" + "Sensitivity SVM: " + str(sensitivitySVM))
-results.write("\n" + "Specificity SVM: " + str(specificitySVM))
-results.write("\n" + "AUC SVM: " + str(AUC_SVM)+ "\n" + str(confMatrixSVM)+ "\n" + str(classReportSVM))
-
-results.write("\n" + "\n" + ("Log Reg accuracy: " + str(resultLogreg)))
-results.write("\n" + str(logReg_cv))
-results.write("\n" + "Sensitivity LogReg: " + str(sensitivity_logreg))
-results.write("\n" + "Specificity LogReg: " + str(specificity_logreg))
-results.write("\n" + "AUC LogReg: " + str(AUC_logreg) + "\n" + str(confMatrix_logreg)+ "\n" + str(classReportLR))
-
-results.write("\n" + "\n" + ("Random Forest accuracy: " + str(resultRfmodel)))
-results.write("\n" + str(rfmodel_cv))
-results.write("\n" + "Sensitivity RF: " + str(sensitivity_rfmodel))
-results.write("\n" + "Specificity RF: " + str(specificity_rfmodel))
-results.write("\n" + "AUC RF: " + str(AUC_rfmodel) + "\n" + str(confMatrix_rfmodel) + "\n" + str(classReportRF))
+results.write("K-nearest Neighbours accuracy: " + str(resultKNN) + "\n" + str(KNN_cv) + "\n" + "Sensitivity KNN: " + str(sensitivityKNN) + "\n" + "Specificity KNN: " + str(specificityKNN) + "\n" + "AUC KNN: " + str(AUC_KNN)+ "\n" + str(confMatrixKNN)+ "\n" + str(classReportKNN))
+results.write("\n" + "\n" + "SVM accuracy:" + str(resultSVM) + "\n" + str(SVM_cv) + "\n" + "Sensitivity SVM: " + str(sensitivitySVM) + "\n" + "Specificity SVM: " + str(specificitySVM) + "\n" + "AUC SVM: " + str(AUC_SVM)+ "\n" + str(confMatrixSVM)+ "\n" + str(classReportSVM))
+results.write("\n" + "\n" + "Log Reg accuracy: " + str(resultLogreg) + "\n" + str(logReg_cv) + "\n" + "Sensitivity LogReg: " + str(sensitivity_logreg) + "\n" + "Specificity LogReg: " + str(specificity_logreg) + "\n" + "AUC LogReg: " + str(AUC_logreg) + "\n" + str(confMatrix_logreg)+ "\n" + str(classReportLR))
+results.write("\n" + "\n" + "Random Forest accuracy: " + str(resultRfmodel) "\n" + str(rfmodel_cv) + "\n" + "Sensitivity RF: " + str(sensitivity_rfmodel) + "\n" + "Specificity RF: " + str(specificity_rfmodel) + "\n" + "AUC RF: " + str(AUC_rfmodel) + "\n" + str(confMatrix_rfmodel) + "\n" + str(classReportRF))
 
 #RFimportances_write = [(('Variable: {:20} Importance: {}'.format(*pair)) + '\n') for pair in feature_importances];
 #results.write("\n" + "\n" + str(RFimportances_write))
