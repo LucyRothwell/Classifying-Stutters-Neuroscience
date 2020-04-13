@@ -2,7 +2,7 @@
 
 This is the code used in a neuroscience research project which classified verbal stutter events by applying machine learning to neural (EEG and fNIRS) data. 
 
-Participants were males who experience child onset fluency disorder (stuttering). Participants were linked up to fNIRS and EEG neural imaging technology and recorded speaking for around 20 minutes at a time. The audio recordings allowed the stutter events to be marked in time. These markings could then be used to label the stutters in the fNIRS/EEG data, in csv files, for use in classification.  
+Participants were males who experience child onset fluency disorder (stuttering). Participants were linked up to fNIRS and EEG neural imaging technology and recorded speaking for around 20 minutes at a time. The audio recordings allowed the stutter events to be marked in time. These markings could then be used to label the stutters in the fNIRS/EEG data, in csv files, for use in classification. (The full study can be seen in "Thesis paper" in this directory. The abstract is on page 9).
 
 **Two scripts**:
 
