@@ -1,4 +1,4 @@
-# Applying Machine Learning to EEG and fNIRS (Neural) Data to Classify Stutters
+# Applying Supervised Machine Learning to EEG and fNIRS (Neural) Data to Classify Stutters
 
 This repository contains code used in a neuroscience research project which classified verbal stutter events by applying machine learning to neural (EEG and fNIRS) data. It also contains the full study write up which can be seen in "Thesis paper" (the abstract is on page 9). Grade for project: 80%.
 
