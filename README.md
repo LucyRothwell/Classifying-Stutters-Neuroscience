@@ -1,4 +1,4 @@
-**The question**
+# The question
 
 Can the occurence of verbal stutters be identified from neural readings?
 
