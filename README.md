@@ -18,6 +18,6 @@ Participants were males who experience child onset fluency disorder (stuttering)
 
 2. **The machine learning script** used to classifiy stutter events (using SVM, KNN, Random Forest and Logistic Regression). Explained in the code comments.
 
-#The results
+# The results
 
 Good results but investigation of overfitting is currently underway (June 2020). To be updated shortly.
