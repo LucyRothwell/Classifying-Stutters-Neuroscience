@@ -8,7 +8,7 @@ This repository contains code used in a neuroscience research project which aime
 
 # The data
 
-4 participants each with 15,000 samples (0.1 second readings) of fNIRS neural readings and 15,000 (0.1 second readings) of EEG neural readings. Labelled.
+4 participants each with 14,000 samples (0.1 second readings) of fNIRS neural readings and 14,000 (0.1 second readings) of EEG neural readings. Labelled.
 
 Participants were males who experience child onset fluency disorder (stuttering). Participants were linked up to fNIRS and EEG neural imaging technology and recorded speaking for around 20 minutes at a time. The audio recordings allowed the stutter events to be time-labelled using Audacity software (see script below). These markings could then be used to label the stutters in the fNIRS/EEG csv files, for use in classification. 
 
