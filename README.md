@@ -20,8 +20,11 @@ Participants were males who experience child onset fluency disorder (stuttering)
 
 # The results
 
-Investigation of overfitting is currently underway (June 2020). To be updated shortly.
+New investigation of overfitting is currently underway (June 2020). To be updated shortly.
 
+<br>
+<br>
+<br>
 <br>
 
 ##########################################################################################
