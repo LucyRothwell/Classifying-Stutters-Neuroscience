@@ -1,6 +1,6 @@
 # The question
 
-Can the occurence of verbal stutters be identified from neural readings?
+Can the occurence of verbal stutters be classified using neural readings?
 
 # Overview
 
