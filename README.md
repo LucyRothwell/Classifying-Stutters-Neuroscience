@@ -4,7 +4,7 @@ Can the occurence of verbal stutters be identified from neural readings?
 
 # Overview
 
-This repository contains code used in a neuroscience research project which aimed to classify verbal stutter events by applying machine learning to neural (EEG and fNIRS) data. It also contains the full study write up (called "Thesis paper" - abstract on page 9). Grade for project: 80% (dissertation for MSc in Psychology Research Methods, UCL).
+This repository contains code used in a neuroscience research project which aimed to classify verbal stutter events by applying machine learning to neural (EEG and fNIRS) data. It also contains the full study write up (called "Thesis paper"). Grade for project: 80% (dissertation for MSc in Psychology Research Methods, UCL).
 
 # The data
 
