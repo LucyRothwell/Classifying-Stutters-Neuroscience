@@ -33,6 +33,7 @@ New investigation of overfitting is currently underway (June 2020). To be update
 # Technical Abstract
 
 **Objective**
+
 The aims of this study were 1) to determine whether supervised machine learning classifiers can be
 used to classify stutter events from neural data, and 2) to investigate best practices for doing so in terms of optimal machine learning classifiers (for example random forest, support vector machine), data structures (high volumes of data versus balanced data) and data types (for example independent EEG components (ICs) versus channel data as predictor variables). In being able to classify stutters that have already occurred, it is hoped science can move towards real-time prediction of stutters (in advance of their occurrence), and as such, prediction-based interventions (using stimulation such as tDCS).
 
